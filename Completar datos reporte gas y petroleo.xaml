@@ -1,0 +1,147 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Completar_datos_reporte_gas_y_petroleo" this:Completar_datos_reporte_gas_y_petroleo.in_AnioDesde="2017" this:Completar_datos_reporte_gas_y_petroleo.in_MesDesde="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_AnioDesde" Type="InArgument(x:String)" />
+    <x:Property Name="in_MesDesde" Type="InArgument(x:String)" />
+    <x:Property Name="in_AnioHasta" Type="InArgument(x:String)" />
+    <x:Property Name="in_MesHasta" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>466,1256</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Completar_datos_reporte_gas_y_petroleo_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Completar_datos_reporte_gas_y_petroleo" sap:VirtualizedContainerService.HintSize="476,1191" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: SIPG 5 - IAPG" sap:VirtualizedContainerService.HintSize="434,1099" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6b96d5f9-9e24-4002-89cd-36e12cb8b6bf" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,883" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fecha desde'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6b96d5f9-9e24-4002-89cd-36e12cb8b6bf" Text="[in_AnioDesde &amp; &quot;[k(enter)]&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://sipg.iapg.org.ar/pages/consultas/produccion/inicial.xhtml" DesignTimeRectangle="304, 268, 36, 26" ElementType="Text" FriendlyName="'2021'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='2021' check:text='2021' /&gt;" Guid="e035875b-fe1d-408c-a943-cc4935900f7e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAeCAYAAABe3VzdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIASURBVFhH7Ze/SwJhGMf9W24TGoKGoMUpp9vcakpocGuKlrBJp1qKhppqk6YC8QZBQXAJRJQTxQbRIVAUDn8devrtfV7frutKE07wAj/wDO/78NzzuefuXjgPXI4pWKlUkMlkkE6nXRVckOQKhQIGgwGm0ykXXgfUW9d1dDodM7ggTY7k3IJVkgvSKNc5OTvk8kPQbWwEnbIRdMqSgjrUuyB2tyRIOwGEn6psR2DUoZwHsC1J8O6xXLwuEsSCOkE9fga/FEFOrO0sJajFT7B9HEPdoEUWkX0fbgqznHrrhz+ahUa5DuX8uFFnuUV1XP42gF1Zhs+ZoAbllF1YNCWqDzKCT03WI4WwFEbKMhbtJQTvRZa1X1DH0HP3CEVTaDZiCDqdoB312oeTuAa8PUI+YBMS+xzW8NC+JzDrrLyvWpDuWL5Ejqb2GoF0FMNsJoJ5Da11VlYq2GSPNBDCc0Osl52gvc7KygQbCs7sTRa+g4Lf6qysRHBuEx25q/lf8Z9yhHPBKu732Rm35YXEzjozouKSc8/BP+rYmxs7sux/y32x3ATXyEbQKRtBp/w/QVf/NH3+dlLCDTEcDtFut3l4aKNcLiOfz6Pb7WI8HsMwjLUE9e73+2i1WmZ4JpMJTxSLRSSTSSiKwiORSLgiPKPRCL1eD7VaDaVSCaqquihUfACn2JE376430QAAAABJRU5ErkJggg==" InformativeScreenshot="3598ec255fd4072482a2597b31b939bf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SIPG 5 - IAPG' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="87, 272, 197, 18" ElementType="Text" FriendlyName="'Fecha desde'" FullSelectorArgument="&lt;webctrl parentid='todo:j_idt200' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='todo:j_idt200' tag='SPAN' type='' aaname='Fecha desde:' check:text='Fecha desde:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMkAAAAWCAYAAABqrrj/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM9SURBVHhe7Zixa+JQHMfvb3ETHIQOQofrVCfhhmwnFBoQKtwgFIqLZDnS4aBLww2VGyqFIwgHGQQPChYEOwgZChkObyhxEDIUMhQyCN/7veTp01QNJ7fd7wOCecl7vye8j+/78g4Mw+yEJWGYDFgShsmAJWGYDFgShsmAJWGYDFgSRjGzoedyyK19dNgzef8/hSVhFLEkJlx5uTf/ahzB2ETu1EYgL/fHhbmn8CwJo2BJNsKSMIpdi3vah6EV4whWPK6j/RQl7a8e2mdlFKk9f6gn7XIcu9dEpUCR7aCqnp8HGF3rKIn2QgXNnp+0r+D3DGgHop8G40JfkSSCd7PoW4LW6sOfU/PcR7+lyTk00Pklay3nXKRnmzQnJcmyBt0rn7XhvSbtm2BJGEW8uMXCWflckjJzD1alAWcqF9/LAOYxyTQP0b/IQ//mIRSL9dmGcTeR42iwxmH8eDg0cbRY6HSv/smWi5sE+2BgIIeNee5Ae29i8JJcBj/qS0nCXgPVazepNY8wudOhdwNEDwZKX0aIRHvkw48L+ehoRzAfkjlg5qC+kMSzUDl34Mu64YOJsvid1Mc+yaHaXReXJWEU23aSTfLQgnMCEWFSi1yQHmftOoJ/30bjJNl90i8Ggq6Oyi2JtmAlbrmX6TnQznFFo5IA+gHtLOdtOE/JnhPX/NCBGknFLVEjPU6u5myNdCwJo9glyUf695eXir+XROwG5ZaDyUx0CmCfvpWk+n2lUkoS8zFpfgPtLP6TE0e/8o3czdbmvC7JWo0MWBJGsU2SOLqUYQ5ldKFI4w4ntCe8jVv1zxR7dkjifT2CLhdo6HWgF9YlEVLkNQuuKEVxzrvVkZeSREMDxZqNySIm/R7BndKXwIMno2D4s5nsLnOSokCRLx4oVUtEOoqLIxnpoqmL0eIcswGWhFFslYQIRrBqJeRFxKEDunkv/4nFwV22Lw/0OyTB1EHjME8RJ4/K1QBOKyUJqedeJ4fwomagP6a+i/MM3Zt01YFbO+8kMq2+VNDoPCNzUzS21AuAngu7pmoFjxZ0OY9Sjfo8i1Y+kzDMXrAkDJMBS8IwGbAkDJMBS8IwGbAkDJMBS8IwOwH+AEjtVBoK9dpYAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fecha desde'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="6b96d5f9-9e24-4002-89cd-36e12cb8b6bf" Text="[in_MesDesde]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://sipg.iapg.org.ar/pages/consultas/produccion/inicial.xhtml" DesignTimeRectangle="364, 268, 26, 26" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='todo:j_idt206_label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='todo:j_idt206_label' tag='LABEL' type='' aaname='1' check:text='1' /&gt;" Guid="5423e25c-6986-403f-a1e8-40acf4dea85b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADKSURBVEhL7ZcxCsIwFIZzllzC0c2pmyfQzRt4AnsDF0/QAzgbyN6h4NBVB6FDx5Ipvzx4llIXtc0LQj74h7xCvvzbq0IkenFd17DWwhgjEkVCSlVV6LoO3nt+ynzQnc45tG3bR1FLCklDM5SrV/UQTceQ400sRRLzODz/Ib6d91jpA0o+T+FDscP1uMYiy7CUFLvyhF1+QXMvsJVtzDyS+HeSmMdjGhQbDa0Hyafpv2s8I0nM4/AksfyyF229jbbQ8zf5Xxj2CgM8Ac4Rgr/eVeDeAAAAAElFTkSuQmCC" InformativeScreenshot="e04026197ee01bcee162839eaec11077.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SIPG 5 - IAPG' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="87, 272, 197, 18" ElementType="Text" FriendlyName="'Fecha desde'" FullSelectorArgument="&lt;webctrl parentid='todo:j_idt200' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='todo:j_idt200' tag='SPAN' type='' aaname='Fecha desde:' check:text='Fecha desde:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMkAAAAWCAYAAABqrrj/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM9SURBVHhe7Zixa+JQHMfvb3ETHIQOQofrVCfhhmwnFBoQKtwgFIqLZDnS4aBLww2VGyqFIwgHGQQPChYEOwgZChkObyhxEDIUMhQyCN/7veTp01QNJ7fd7wOCecl7vye8j+/78g4Mw+yEJWGYDFgShsmAJWGYDFgShsmAJWGYDFgSRjGzoedyyK19dNgzef8/hSVhFLEkJlx5uTf/ahzB2ETu1EYgL/fHhbmn8CwJo2BJNsKSMIpdi3vah6EV4whWPK6j/RQl7a8e2mdlFKk9f6gn7XIcu9dEpUCR7aCqnp8HGF3rKIn2QgXNnp+0r+D3DGgHop8G40JfkSSCd7PoW4LW6sOfU/PcR7+lyTk00Pklay3nXKRnmzQnJcmyBt0rn7XhvSbtm2BJGEW8uMXCWflckjJzD1alAWcqF9/LAOYxyTQP0b/IQ//mIRSL9dmGcTeR42iwxmH8eDg0cbRY6HSv/smWi5sE+2BgIIeNee5Ae29i8JJcBj/qS0nCXgPVazepNY8wudOhdwNEDwZKX0aIRHvkw48L+ehoRzAfkjlg5qC+kMSzUDl34Mu64YOJsvid1Mc+yaHaXReXJWEU23aSTfLQgnMCEWFSi1yQHmftOoJ/30bjJNl90i8Ggq6Oyi2JtmAlbrmX6TnQznFFo5IA+gHtLOdtOE/JnhPX/NCBGknFLVEjPU6u5myNdCwJo9glyUf695eXir+XROwG5ZaDyUx0CmCfvpWk+n2lUkoS8zFpfgPtLP6TE0e/8o3czdbmvC7JWo0MWBJGsU2SOLqUYQ5ldKFI4w4ntCe8jVv1zxR7dkjifT2CLhdo6HWgF9YlEVLkNQuuKEVxzrvVkZeSREMDxZqNySIm/R7BndKXwIMno2D4s5nsLnOSokCRLx4oVUtEOoqLIxnpoqmL0eIcswGWhFFslYQIRrBqJeRFxKEDunkv/4nFwV22Lw/0OyTB1EHjME8RJ4/K1QBOKyUJqedeJ4fwomagP6a+i/MM3Zt01YFbO+8kMq2+VNDoPCNzUzS21AuAngu7pmoFjxZ0OY9Sjfo8i1Y+kzDMXrAkDJMBS8IwGbAkDJMBS8IwGbAkDJMBS8IwOwH+AEjtVBoK9dpYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Fecha desde'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="6b96d5f9-9e24-4002-89cd-36e12cb8b6bf" Text="%[k(enter)]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://sipg.iapg.org.ar/pages/consultas/produccion/inicial.xhtml" DesignTimeRectangle="364, 268, 26, 26" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='todo:j_idt206_label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='todo:j_idt206_label' tag='LABEL' type='' aaname='1' check:text='1' /&gt;" Guid="5423e25c-6986-403f-a1e8-40acf4dea85b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADKSURBVEhL7ZcxCsIwFIZzllzC0c2pmyfQzRt4AnsDF0/QAzgbyN6h4NBVB6FDx5Ipvzx4llIXtc0LQj74h7xCvvzbq0IkenFd17DWwhgjEkVCSlVV6LoO3nt+ynzQnc45tG3bR1FLCklDM5SrV/UQTceQ400sRRLzODz/Ib6d91jpA0o+T+FDscP1uMYiy7CUFLvyhF1+QXMvsJVtzDyS+HeSmMdjGhQbDa0Hyafpv2s8I0nM4/AksfyyF229jbbQ8zf5Xxj2CgM8Ac4Rgr/eVeDeAAAAAElFTkSuQmCC" InformativeScreenshot="e04026197ee01bcee162839eaec11077.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SIPG 5 - IAPG' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="87, 272, 197, 18" ElementType="Text" FriendlyName="'Fecha desde'" FullSelectorArgument="&lt;webctrl parentid='todo:j_idt200' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='todo:j_idt200' tag='SPAN' type='' aaname='Fecha desde:' check:text='Fecha desde:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMkAAAAWCAYAAABqrrj/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM9SURBVHhe7Zixa+JQHMfvb3ETHIQOQofrVCfhhmwnFBoQKtwgFIqLZDnS4aBLww2VGyqFIwgHGQQPChYEOwgZChkObyhxEDIUMhQyCN/7veTp01QNJ7fd7wOCecl7vye8j+/78g4Mw+yEJWGYDFgShsmAJWGYDFgShsmAJWGYDFgSRjGzoedyyK19dNgzef8/hSVhFLEkJlx5uTf/ahzB2ETu1EYgL/fHhbmn8CwJo2BJNsKSMIpdi3vah6EV4whWPK6j/RQl7a8e2mdlFKk9f6gn7XIcu9dEpUCR7aCqnp8HGF3rKIn2QgXNnp+0r+D3DGgHop8G40JfkSSCd7PoW4LW6sOfU/PcR7+lyTk00Pklay3nXKRnmzQnJcmyBt0rn7XhvSbtm2BJGEW8uMXCWflckjJzD1alAWcqF9/LAOYxyTQP0b/IQ//mIRSL9dmGcTeR42iwxmH8eDg0cbRY6HSv/smWi5sE+2BgIIeNee5Ae29i8JJcBj/qS0nCXgPVazepNY8wudOhdwNEDwZKX0aIRHvkw48L+ehoRzAfkjlg5qC+kMSzUDl34Mu64YOJsvid1Mc+yaHaXReXJWEU23aSTfLQgnMCEWFSi1yQHmftOoJ/30bjJNl90i8Ggq6Oyi2JtmAlbrmX6TnQznFFo5IA+gHtLOdtOE/JnhPX/NCBGknFLVEjPU6u5myNdCwJo9glyUf695eXir+XROwG5ZaDyUx0CmCfvpWk+n2lUkoS8zFpfgPtLP6TE0e/8o3czdbmvC7JWo0MWBJGsU2SOLqUYQ5ldKFI4w4ntCe8jVv1zxR7dkjifT2CLhdo6HWgF9YlEVLkNQuuKEVxzrvVkZeSREMDxZqNySIm/R7BndKXwIMno2D4s5nsLnOSokCRLx4oVUtEOoqLIxnpoqmL0eIcswGWhFFslYQIRrBqJeRFxKEDunkv/4nFwV22Lw/0OyTB1EHjME8RJ4/K1QBOKyUJqedeJ4fwomagP6a+i/MM3Zt01YFbO+8kMq2+VNDoPCNzUzS21AuAngu7pmoFjxZ0OY9Sjfo8i1Y+kzDMXrAkDJMBS8IwGbAkDJMBS8IwGbAkDJMBS8IwOwH+AEjtVBoK9dpYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2816316751f91c45448562159c368b6d.png" Selector="&lt;html app='chrome.exe' title='SIPG 5 - IAPG'/&gt;" Url="https://sipg.iapg.org.ar/pages/consultas/produccion/inicial.xhtml" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
